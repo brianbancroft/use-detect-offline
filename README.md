@@ -4,24 +4,25 @@
 
 [![NPM](https://img.shields.io/npm/v/use-detect-offline.svg)](https://www.npmjs.com/package/use-detect-offline) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+A custom React Hook that will detect in a browser whether you are offline or online, and whether this has changed.
+
 ## Install
 
 ```bash
-npm install --save use-detect-offline
+npm install use-detect-offline
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import useDetectOffline from 'use-detect-offline'
 
-import MyComponent from 'use-detect-offline'
-import 'use-detect-offline/dist/index.css'
+export default function Component () {
+  const {offline} = useDetectOffline()
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+
+  return <p>Current status: {offline ? 'offline' : 'online'4}\
 }
 ```
 

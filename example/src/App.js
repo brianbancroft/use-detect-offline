@@ -1,10 +1,19 @@
-import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import useDetectOffline from 'use-detect-offline'
+import OfflineParagraph from './OfflineParagraph'
 
-import { ExampleComponent } from 'use-detect-offline'
-import 'use-detect-offline/dist/index.css'
+function App() {
+  const { offline } = useDetectOffline()
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
+        <OfflineParagraph offline={offline} />
+      </header>
+    </div>
+  )
 }
 
 export default App
