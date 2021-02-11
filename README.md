@@ -22,7 +22,7 @@ export default function Component () {
   const {offline} = useDetectOffline()
 
 
-  return <p>Current status: {offline ? 'offline' : 'online'4}\
+  return <p>Current status: {offline ? 'offline' : 'online'4}</p>
 }
 ```
 
